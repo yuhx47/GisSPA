@@ -44,7 +44,8 @@ temp file:
 2. sudo apt-get install git-lfs  
 3. git lfs install  
 4. git lfs clone https://github.com/Autumn1998/GisSPA.git   
-  
+
+### start from here  
 -> install hdf5     
 
 0. cd GisSPA  
@@ -56,16 +57,21 @@ temp file:
 6. make install   
 7. export LD_LIBRARY_PATH="your hdf5 install path"/lib:$LD_LIBRARY_PATH  
    at /etc/profile or ~/.bashrc    
-8. source /etc/profile or ~/.bashrc   
-  
+8. source /etc/profile or ~/.-> install hdf5     
+
+-> install jspr
+0. tar zvxf jspr.2017-7-20.tar.gz
+
 -> run GisSPA   
    
 0. cd GisSPA  
 1. vim Makfile, set LIB_HDF5="your hdf5 install path"/lib,  set INCLUDE_HDF5="your hdf5 install path"/include  
-2. make clean  
-3. make  
-	If "can not create /Output/Objects/main.o", mkdir /Output/Objects  
-4. ./main ./Data_TEST/config   
+2. make clean
+3. ml gcccuda #Mccleary  
+4. make  
+	If "can not create /Output/Objects/main.o", mkdir /Output/Objects
+#### done
+5. ./main ./Data_TEST/config   
 
 WARNING:The Data_TEST need at least 13GB memory at GPU!     
 If error occurred and temp_size = 10,10 and img_size = 10,10, check the git lfs.  
