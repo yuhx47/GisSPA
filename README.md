@@ -45,7 +45,7 @@ temp file:
 3. git lfs install  
 4. git lfs clone https://github.com/Autumn1998/GisSPA.git   
 
-### start from here  
+### start from here (huaxin)
 git clone https://github.com/Autumn1998/GisSPA #All packages here except jspr.2017-7-20.tar.gz
 
 -> install hdf5     
@@ -74,7 +74,7 @@ git clone https://github.com/Autumn1998/GisSPA #All packages here except jspr.20
 3. ml gcccuda #For Mccleary  
 4. make  
 	If "can not create /Output/Objects/main.o", mkdir /Output/Objects
-#### done
+#### done (huaxin)
 5. ./main ./Data_TEST/config   
 
 WARNING:The Data_TEST need at least 13GB memory at GPU!     
