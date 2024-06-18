@@ -46,28 +46,31 @@ temp file:
 4. git lfs clone https://github.com/Autumn1998/GisSPA.git   
 
 ### start from here  
+git clone https://github.com/Autumn1998/GisSPA #All packages here except jspr.2017-7-20.tar.gz
 -> install hdf5     
 
 0. cd GisSPA  
 1. cd ./hdf5 
-2. tar zvxf hdf5-1.8.21.tar.gz     
-3. cd hdf5-1.8.21   
-4. ./configure --prefix="your hdf5 install path"   
+2. tar zvxf hdf5-1.8.21.tar.gz -C ../../hdf5-pack     
+3. cd ../../hdf5-pack/hdf5-1.8.21
+4. ./configure --prefix="your hdf5 install path: hdf5-install"   
 5. make   
 6. make install   
 7. export LD_LIBRARY_PATH="your hdf5 install path"/lib:$LD_LIBRARY_PATH  
    at /etc/profile or ~/.bashrc    
-8. source /etc/profile or ~/.-> install hdf5     
+8. source /etc/profile or ~/.bashrc
 
 -> install jspr
+
 0. tar zvxf jspr.2017-7-20.tar.gz
 
 -> run GisSPA   
-   
+
+
 0. cd GisSPA  
 1. vim Makfile, set LIB_HDF5="your hdf5 install path"/lib,  set INCLUDE_HDF5="your hdf5 install path"/include  
 2. make clean
-3. ml gcccuda #Mccleary  
+3. ml gcccuda #For Mccleary  
 4. make  
 	If "can not create /Output/Objects/main.o", mkdir /Output/Objects
 #### done
